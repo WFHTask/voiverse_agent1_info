@@ -83,6 +83,16 @@ export const translations = {
         features: ["API Access", "Custom Strategy", "1v1 Account Manager"]
       }
     },
+    community: {
+      title: "Join the Inner Circle",
+      subtitle: "Get direct access to Alpha signals and dev updates.",
+      wechatTitle: "WeChat Group (Priority)",
+      wechatDesc: "Scan to join the Alpha testing group",
+      wechatNote: "QR code valid for 7 days (before Jan 3). Re-enter to update.",
+      telegramTitle: "Telegram Channel",
+      telegramDesc: "Join for global updates",
+      telegramBtn: "Join Telegram"
+    },
     waitlist: {
       title: "Join Alpha",
       subtitle: "First",
@@ -183,6 +193,16 @@ export const translations = {
         cta: "申请内测",
         features: ["API 数据接口访问", "定制化监控策略", "1v1 专属客服经理"]
       }
+    },
+    community: {
+      title: "加入核心社区",
+      subtitle: "直接获取 Alpha 信号与开发动态。",
+      wechatTitle: "微信内测群 (优先)",
+      wechatDesc: "扫码直接加入内测交流群",
+      wechatNote: "该二维码7天内 (1月3日前) 有效，重新进入将更新",
+      telegramTitle: "Telegram 频道",
+      telegramDesc: "加入全球更新频道",
+      telegramBtn: "加入 Telegram"
     },
     waitlist: {
       title: "加入内测",

@@ -3,7 +3,11 @@ import { StepCard } from './StepCard';
 import { ProblemIllustration, SolutionIllustration, ResultIllustration } from './Illustrations';
 import { useLanguage } from '../contexts/LanguageContext';
 
-export const ThreeStepFlow: React.FC = () => {
+interface ThreeStepFlowProps {
+  onJoinClick?: () => void;
+}
+
+export const ThreeStepFlow: React.FC<ThreeStepFlowProps> = ({ onJoinClick }) => {
   const { t } = useLanguage();
 
   return (
@@ -64,6 +68,7 @@ export const ThreeStepFlow: React.FC = () => {
             tagColor="bg-emerald-50 text-emerald-600 border-emerald-100"
             accentColor="text-emerald-600"
             callToAction={t.flow.step3.cta}
+            onCtaClick={onJoinClick}
           >
             <ResultIllustration 
               title={t.flow.illus.dailyAlpha}

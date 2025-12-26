@@ -12,6 +12,7 @@ interface StepCardProps {
   accentColor: string;
   isCenter?: boolean;
   callToAction?: string;
+  onCtaClick?: () => void;
 }
 
 export const StepCard: React.FC<StepCardProps> = ({ 
@@ -25,7 +26,8 @@ export const StepCard: React.FC<StepCardProps> = ({
   tagColor,
   accentColor,
   isCenter = false,
-  callToAction
+  callToAction,
+  onCtaClick
 }) => {
   return (
     <div id={id} className={`relative flex flex-col h-full ${isCenter ? 'lg:-mt-8' : ''}`}>
@@ -65,9 +67,12 @@ export const StepCard: React.FC<StepCardProps> = ({
             {description}
           </p>
           {callToAction && (
-            <div className={`mt-4 font-bold ${accentColor} flex items-center gap-1`}>
+            <button 
+              onClick={onCtaClick}
+              className={`mt-4 font-bold ${accentColor} flex items-center gap-1 hover:opacity-80 transition-opacity focus:outline-none`}
+            >
               {callToAction}
-            </div>
+            </button>
           )}
         </div>
       </div>
