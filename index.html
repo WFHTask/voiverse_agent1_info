@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Voiverse - 你的 Web3 AI 降噪情报官 | 智能筛选 Alpha 信号</title>
+    <meta name="title" content="Voiverse - 你的 Web3 AI 降噪情报官 | 智能筛选 Alpha 信号">
+    <meta name="description" content="Voiverse 利用 AI 人工智能过滤 99% 的 Web3 市场噪音，每日为您推送高价值 Alpha 简报、预测市场动态及链上数据分析。拒绝 FOMO，只看干货。">
+    <meta name="keywords" content="Web3, AI, 区块链, 降噪, Alpha信号, 预测市场, 链上数据, 投资简报, Voiverse, 加密货币, DeFi, NFT">
+    <meta name="author" content="Voiverse Labs">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://voiverse.ai/">
+    <meta property="og:title" content="Voiverse - 你的 Web3 AI 降噪情报官">
+    <meta property="og:description" content="别让噪音埋没你的 Alpha。Voiverse AI 自动识别高价值情报，每日生成 3 分钟简报。">
+    <meta property="og:image" content="https://voiverse.ai/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://voiverse.ai/">
+    <meta property="twitter:title" content="Voiverse - 你的 Web3 AI 降噪情报官">
+    <meta property="twitter:description" content="别让噪音埋没你的 Alpha。Voiverse AI 自动识别高价值情报，每日生成 3 分钟简报。">
+    <meta property="twitter:image" content="https://voiverse.ai/twitter-image.jpg">
+
+    <!-- Structured Data (JSON-LD) for SEO Automation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Voiverse",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "description": "Voiverse 是一个 Web3 AI 降噪情报工具，帮助用户过滤市场噪音，获取高质量的 Alpha 投资信号。",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "100"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'voi-bg': '#F8FAFC',       // Very light slate/white
+              'voi-surface': '#FFFFFF',  // Pure white
+              'voi-text-main': '#0F172A',// Dark slate
+              'voi-text-muted': '#64748B',// Medium slate
+              'voi-accent': '#4F46E5',   // Indigo-600 (slightly darker for contrast on white)
+              'voi-success': '#059669',  // Emerald-600
+              'voi-gold': '#D97706',     // Amber-600
+              'voi-danger': '#DC2626',   // Red-600
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-soft': 'pulse-soft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              'pulse-soft': {
+                '0%, 100%': { opacity: '1', boxShadow: '0 0 0 rgba(79, 70, 229, 0)' },
+                '50%': { opacity: '.9', boxShadow: '0 0 20px rgba(79, 70, 229, 0.1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F8FAFC;
+        color: #0F172A;
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F1F5F9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #CBD5E1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94A3B8;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
