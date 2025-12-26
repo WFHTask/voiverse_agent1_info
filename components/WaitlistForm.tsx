@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Mail, Check } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface WaitlistFormProps {
   isOpen: boolean;
@@ -9,6 +10,7 @@ interface WaitlistFormProps {
 export const WaitlistForm: React.FC<WaitlistFormProps> = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useLanguage();
 
   if (!isOpen) return null;
 
@@ -42,28 +44,28 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ isOpen, onClose }) =
             <div className="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
               <Check className="w-8 h-8 text-emerald-600" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">申请已提交</h3>
-            <p className="text-slate-500">请留意您的邮箱，内测邀请码将随机发送。</p>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">{t.waitlist.successTitle}</h3>
+            <p className="text-slate-500">{t.waitlist.successDesc}</p>
             <button 
               onClick={onClose}
               className="mt-8 text-sm text-indigo-600 hover:text-indigo-800 font-bold"
             >
-              关闭
+              {t.waitlist.close}
             </button>
           </div>
         ) : (
           <div className="py-2">
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">加入内测</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">{t.waitlist.title}</h3>
               <p className="text-slate-500">
-                首批仅开放 <span className="font-bold text-indigo-600">100</span> 个席位。立即预订您的 Alpha 过滤器。
+                {t.waitlist.subtitle} <span className="font-bold text-indigo-600">100</span> {t.waitlist.subtitle2}
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-2">
-                  邮箱地址 (Email)
+                  {t.waitlist.emailLabel}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -74,7 +76,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ isOpen, onClose }) =
                     id="email"
                     required
                     className="block w-full pl-10 pr-3 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all shadow-sm"
-                    placeholder="you@example.com"
+                    placeholder={t.waitlist.placeholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -86,12 +88,12 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ isOpen, onClose }) =
                   type="submit"
                   className="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl shadow-lg shadow-indigo-600/20 text-sm font-bold text-white bg-slate-900 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 transition-all transform hover:-translate-y-0.5"
                 >
-                  立即申请
+                  {t.waitlist.cta}
                 </button>
               </div>
               
               <p className="text-xs text-center text-slate-400 mt-6">
-                我们尊重隐私，绝不发送垃圾邮件。
+                {t.waitlist.privacy}
               </p>
             </form>
           </div>

@@ -95,7 +95,18 @@ export const SolutionIllustration: React.FC = () => {
 // ==========================================
 // SCENE 3: THE RESULT (Relaxed Control)
 // ==========================================
-export const ResultIllustration: React.FC = () => {
+
+interface ResultIllustrationProps {
+  title?: string;
+  readTime?: string;
+  badge?: string;
+}
+
+export const ResultIllustration: React.FC<ResultIllustrationProps> = ({ 
+  title = "Daily Alpha", 
+  readTime = "3 min read", 
+  badge = "FOMO Free" 
+}) => {
   return (
     <div className="relative w-full h-full bg-emerald-50/30 flex flex-col items-center justify-center p-4">
       {/* Background Decor */}
@@ -112,9 +123,9 @@ export const ResultIllustration: React.FC = () => {
                <div className="p-1.5 bg-emerald-100 rounded-full">
                  <Newspaper className="w-3 h-3 text-emerald-600" />
                </div>
-               <span className="text-[10px] font-bold text-slate-800 uppercase">Daily Alpha</span>
+               <span className="text-[10px] font-bold text-slate-800 uppercase">{title}</span>
             </div>
-            <span className="text-[9px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded font-medium">3 min read</span>
+            <span className="text-[9px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded font-medium">{readTime}</span>
           </div>
           
           <div className="space-y-2">
@@ -136,7 +147,7 @@ export const ResultIllustration: React.FC = () => {
          <div className="bg-amber-100 p-0.5 rounded-full">
            <Zap className="w-3 h-3 text-amber-500 fill-amber-500" />
          </div>
-         <span className="text-xs text-slate-700 font-bold">FOMO Free</span>
+         <span className="text-xs text-slate-700 font-bold">{badge}</span>
       </div>
     </div>
   );

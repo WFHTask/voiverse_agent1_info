@@ -6,10 +6,10 @@ import { Pricing } from './components/Pricing';
 import { WaitlistForm } from './components/WaitlistForm';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
+import { LanguageProvider } from './contexts/LanguageContext';
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-
   const toggleWaitlist = () => setIsWaitlistOpen(!isWaitlistOpen);
 
   return (
@@ -26,6 +26,14 @@ const App: React.FC = () => {
 
       <Footer />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 };
 
