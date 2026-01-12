@@ -5,98 +5,105 @@ export const translations = {
     nav: {
       works: "How it works",
       topics: "Topics",
+      sources: "Sources",
       pricing: "Pricing",
       cta: "Join Beta",
       waitlist: "Join Waitlist"
     },
     hero: {
-      badge: "Voiverse Alpha Launch",
-      titleStart: "Your Web3 AI",
-      titleEnd: "Noise Filter",
-      mobileSubtitle: "Only Signal, No FOMO.",
-      desktopSubtitle: "Don't let noise bury your Alpha. Only signal, no FOMO.",
-      desc: "Driven by AI, filtering 100+ crypto media & KOLs to present core Web3 insights. Never miss an on-chain opportunity.",
-      topics: ["Blockchain Tech", "Crypto Market", "DeFi Protocols", "NFT News", "DAO", "Layer 2", "Cross-chain", "Security"],
+      badge: "AIFocus Alpha Launch",
+      titleStart: "We Read For You.",
+      titleEnd: "You Only Read What Matters.",
+      mobileSubtitle: "10 minutes a day. Never miss what's important.",
+      desktopSubtitle: "We believe the truly important news for you each day is just a handful — readable in 10 minutes. We find them for you.",
+      desc: "No more jumping between dozens of tabs, anxious about missing something crucial. AIFocus reads all your information sources — Twitter KOLs, newsletters, research papers, tech media — and surfaces only the most important updates for you.",
+      learnPref: "The more you use it, the better it understands what matters to you.",
+      topics: ["Twitter KOLs", "Research Papers", "Tech Media", "Newsletters", "Podcasts", "Industry Reports", "Startup News", "Open Source"],
       cta: "Get Early Access",
       quota: "* First 100 spots only"
     },
     flow: {
-      title: "How it works: Chaos to Control",
-      subtitle: "Voiverse redefines your path to crypto info, letting value surface automatically.",
+      title: "How it works: From Chaos to Clarity",
+      subtitle: "We don't add another source. We replace the chaos with a single, personalized stream.",
       step1: {
         title: "Info Overload",
         subtitle: "The Problem",
-        desc: "500+ tweets, 1000+ Telegram messages daily. Staying up all night but still missing the 'Golden Dog'?",
+        desc: "50+ browser tabs, Twitter, newsletters, podcasts, research papers... Hours spent daily, yet still anxious about missing something important.",
         tag: "Pain Point"
       },
       step2: {
-        title: "Smart Filtering",
+        title: "Smart Aggregation",
         subtitle: "The Solution",
-        desc: "Discard 99% of noise. AI identifies your interests. No searching needed, key intel finds you.",
+        desc: "We connect to ALL your sources — Twitter, newsletters, media sites, research hubs. Everything flows into one unified stream. You subscribe once, we handle the rest.",
         tag: "Core Tech"
       },
       step3: {
-        title: "Daily Alpha Brief",
+        title: "Learn Your Taste",
+        subtitle: "Personalization",
+        desc: "Every click, save, and skip teaches us what you care about. Over time, your brief becomes uniquely yours — surfacing exactly what matters to you.",
+        tag: "AI Learning"
+      },
+      step4: {
+        title: "10-Min Daily Brief",
         subtitle: "The Result",
-        desc: "Compressing hours of scattered info into a 3-minute visual brief. Pushed to your inbox/TG. Master your decisions.",
+        desc: "Wake up to a curated brief with only the most important updates. No more FOMO, no more tab-hopping. Just clarity in 10 minutes.",
         tag: "Benefit",
         cta: "Join Beta!"
       },
       illus: {
-        dailyAlpha: "Daily Alpha",
-        readTime: "3 min read",
-        fomoFree: "FOMO Free"
+        dailyAlpha: "Daily Brief",
+        readTime: "10 min read",
+        fomoFree: "Zero FOMO"
       }
     },
     topics: {
       title: "Featured Topics",
-      subtitle: "Voiverse scans the entire Web3 track 24/7 to extract high-value intel.",
+      subtitle: "AIFocus scans the entire AI ecosystem 24/7 to extract high-value intelligence.",
       list: [
-        { title: "Prediction Markets", desc: "Track Polymarket odds in real-time. Insight into elections & macro events faster than news." },
-        { title: "Meme Coins / Gems", desc: "Monitor on-chain volume anomalies. Spot the next 100x Meme 10 mins before Twitter." },
-        { title: "Airdrop Tasks", desc: "AI curates low-cost, high-return airdrop paths. No more blind grinding." },
-        { title: "Smart Money", desc: "Track whale wallets. Analyze the highest win-rate on-chain operations." },
-        { title: "DeFi Yields", desc: "Aggregate APY data. Filter for premium pools with lowest impermanent loss risk." },
-        { title: "Research Summaries", desc: "Condense 50-page institutional reports into 200-word core insights." }
+        { title: "LLM & Foundation Models", desc: "Track breakthroughs from OpenAI, Anthropic, Google DeepMind. Get summaries of key research papers before they trend." },
+        { title: "AI Startup Landscape", desc: "Monitor funding rounds, product launches, and strategic moves in the AI startup ecosystem." },
+        { title: "AGI & Safety Research", desc: "Curated updates on alignment research, safety papers, and thought leadership from leading researchers." },
+        { title: "AI Policy & Regulation", desc: "Track global AI governance, regulatory changes, and policy debates that shape the industry." },
+        { title: "Open Source & Tools", desc: "Stay updated on open-source releases, new frameworks, and developer tools transforming AI development." },
+        { title: "Investment Insights", desc: "Aggregate VC perspectives, market analysis, and funding trends in the AI sector." }
       ]
+    },
+    kol: {
+      title: "Your Sources, Unified",
+      subtitle: "From Twitter KOLs to tech media, research papers to newsletters — we aggregate them all. You choose who matters most.",
+      followersLabel: "followers",
+      readersLabel: "readers",
+      viewMore: "View All 100+ Sources",
+      sectionKol: "Top AI Voices",
+      sectionMedia: "Premier AI Media"
     },
     pricing: {
       title: "Choose Your Plan",
       subtitle: "During Alpha, all premium features are free for a limited time.",
       explorer: {
         name: "Explorer",
-        desc: "For Web3 Beginners",
+        desc: "For AI Enthusiasts",
         cta: "Apply for Access",
-        features: ["1 Daily Alpha Brief", "Basic Chain Monitoring", "Community Support"]
+        features: ["1 Daily AI Brief", "Basic Topic Tracking", "Email Support"]
       },
       pro: {
-        name: "Alpha Hunter",
-        desc: "For Traders & Analysts",
+        name: "Pro Insider",
+        desc: "For Founders & VCs",
         badge: "Most Popular",
         cta: "Apply for Access",
-        features: ["Real-time Alpha Signals", "Unlimited AI Summaries", "All Chains (L2 included)", "Smart Money Tracking"]
+        features: ["Real-time AI Signals", "Unlimited AI Summaries", "Custom Source Feeds", "Research Paper Digests"]
       },
       whale: {
-        name: "Whale",
-        desc: "For Institutions",
+        name: "Enterprise",
+        desc: "For Organizations",
         cta: "Apply for Access",
-        features: ["API Access", "Custom Strategy", "1v1 Account Manager"]
+        features: ["API Access", "Custom Intelligence", "1v1 Account Manager"]
       }
-    },
-    community: {
-      title: "Join the Inner Circle",
-      subtitle: "Get direct access to Alpha signals and dev updates.",
-      wechatTitle: "WeChat Group (Priority)",
-      wechatDesc: "Scan to join the Alpha testing group",
-      wechatNote: "QR code valid for 7 days (before Jan 3). Re-enter to update.",
-      telegramTitle: "Telegram Channel",
-      telegramDesc: "Join for global updates",
-      telegramBtn: "Join Telegram"
     },
     waitlist: {
       title: "Join Alpha",
       subtitle: "First",
-      subtitle2: "spots only. Reserve your Alpha filter now.",
+      subtitle2: "spots only. Reserve your AI intelligence filter now.",
       emailLabel: "Email Address",
       placeholder: "you@example.com",
       cta: "Join Waitlist",
@@ -106,8 +113,8 @@ export const translations = {
       close: "Close"
     },
     footer: {
-      tagline: "Web3 AI Noise Filter",
-      rights: "Voiverse Labs. All rights reserved.",
+      tagline: "AI Industry Intelligence Filter",
+      rights: "AIFocus Labs. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Service"
     }
@@ -116,98 +123,105 @@ export const translations = {
     nav: {
       works: "工作原理",
       topics: "精选主题",
+      sources: "信息源",
       pricing: "价格计划",
       cta: "内测申请",
       waitlist: "加入内测"
     },
     hero: {
-      badge: "Voiverse 内测启动",
-      titleStart: "你的 Web3 AI",
-      titleEnd: "降噪情报官",
-      mobileSubtitle: "只听干货，拒绝 FOMO。",
-      desktopSubtitle: "别让噪音埋没你的 Alpha。只听干货，拒绝 FOMO。",
-      desc: "「Web3每日推荐」由 AI 驱动，从 100+ 加密媒体和 KOL 中智能筛选，呈现 Web3 核心资讯。不错过每个重要的链上机会。",
-      topics: ["区块链技术", "加密货币市场", "DeFi协议", "NFT动态", "DAO治理", "Layer2扩容", "跨链桥", "智能合约安全"],
+      badge: "AIFocus 内测启动",
+      titleStart: "我们帮你读。",
+      titleEnd: "你只读最重要的。",
+      mobileSubtitle: "每天10分钟，不错过任何重要信息。",
+      desktopSubtitle: "我们相信，对你而言一天里真正重要的信息也就那么几条，十分钟内就能读完。我们替你找出来。",
+      desc: "不用再每天分心花几个小时在几十上百个标签之间跳转，生怕错过最重要的信息。AIFocus 帮你阅读所有信息源 — Twitter KOL、Newsletter、研究论文、科技媒体 — 只把对你最重要的呈现出来。",
+      learnPref: "用得越多，它就越懂你关心什么。",
+      topics: ["Twitter KOL", "研究论文", "科技媒体", "Newsletter", "播客", "行业报告", "创业动态", "开源项目"],
       cta: "立即获取内测资格",
       quota: "* 首批 100 个测试名额"
     },
     flow: {
-      title: "工作原理：从混乱到掌控，只需三步",
-      subtitle: "Voiverse 重新定义你获取 Crypto 信息的路径，让价值自动浮现。",
+      title: "工作原理：从混乱到清晰",
+      subtitle: "我们不是新增一个信息源，而是用一条个性化的信息流取代所有混乱。",
       step1: {
         title: "信息过载",
-        subtitle: "Info Overload",
-        desc: "每天 500+ 条推特、1000+ Telegram 信息，几百个群消息。盯盘熬夜，却还是错过金狗？",
+        subtitle: "痛点",
+        desc: "50多个浏览器标签页、Twitter、Newsletter、播客、研究论文... 每天花几个小时，却还是担心错过重要信息。",
         tag: "痛点场景"
       },
       step2: {
-        title: "AI 意图过滤",
-        subtitle: "Smart Filtering",
-        desc: "扔掉 99% 的噪音，AI 自动识别你的关注点。无需搜索，关键情报主动找你。",
+        title: "智能聚合",
+        subtitle: "解决方案",
+        desc: "我们连接你所有的信息源 — Twitter、Newsletter、媒体网站、研究机构。所有信息汇入一条统一的信息流。你只需订阅一次，剩下的我们来处理。",
         tag: "核心机制"
       },
       step3: {
-        title: "每日3分钟 Alpha简报",
-        subtitle: "Instant Results",
-        desc: "为你把数小时分散的信息提炼最重要，形成 3 分钟图文并茂简报。直接推送至您的微信、Telegram 或邮箱。不再做信息的奴隶，做决策的主人。",
+        title: "学习你的偏好",
+        subtitle: "个性化",
+        desc: "每一次点击、收藏、跳过，都在教会我们你关心什么。随着时间推移，你的简报会变得独一无二 — 精准呈现对你最重要的内容。",
+        tag: "AI 学习"
+      },
+      step4: {
+        title: "每日10分钟简报",
+        subtitle: "最终成果",
+        desc: "醒来就能看到一份精选简报，只包含最重要的更新。不再焦虑错过，不再标签页跳转。10分钟，一切清晰。",
         tag: "最终收益",
         cta: "加入内测！"
       },
       illus: {
         dailyAlpha: "每日简报",
-        readTime: "3分钟阅读",
-        fomoFree: "告别FOMO"
+        readTime: "10分钟阅读",
+        fomoFree: "告别焦虑"
       }
     },
     topics: {
       title: "精选主题",
-      subtitle: "Voiverse 全天候扫描 Web3 全赛道，为您提炼以下高价值情报",
+      subtitle: "AIFocus 全天候扫描 AI 全生态，为您提炼以下高价值情报",
       list: [
-        { title: "预测市场", desc: "实时追踪 Polymarket 胜率异动，比新闻更快洞察大选、宏观与热门事件走向。" },
-        { title: "Meme 土狗 / 金狗", desc: "实时监控链上交易量异动，比推特早 10 分钟发现下一个百倍 Meme。" },
-        { title: "Airdrop 空投交互", desc: "AI 自动整理低成本、高回报的空投交互路径，告别盲目刷单。" },
-        { title: "Smart Money 聪明钱", desc: "追踪鲸鱼钱包动向，分析胜率最高的链上地址操作。" },
-        { title: "DeFi 收益挖矿", desc: "聚合全网 APY 数据，筛选无常损失风险最低的优质矿池。" },
-        { title: "研报精读", desc: "将 50 页的机构英文研报提炼为 200 字中文核心观点。" }
+        { title: "LLM与基础模型", desc: "追踪 OpenAI、Anthropic、Google DeepMind 的最新突破。在论文爆火前获取核心摘要。" },
+        { title: "AI 创业生态", desc: "监控融资动态、产品发布和 AI 创业公司的战略动向。" },
+        { title: "AGI与安全研究", desc: "精选对齐研究、安全论文和顶尖研究者的思想领导力更新。" },
+        { title: "AI 政策与监管", desc: "追踪全球 AI 治理、监管变化和影响行业的政策辩论。" },
+        { title: "开源与工具", desc: "掌握开源发布、新框架和改变 AI 开发的开发者工具。" },
+        { title: "投资洞察", desc: "聚合 VC 视角、市场分析和 AI 领域的融资趋势。" }
       ]
+    },
+    kol: {
+      title: "你的信息源，统一管理",
+      subtitle: "从 Twitter KOL 到科技媒体，从研究论文到 Newsletter — 我们全部聚合。由你选择谁最重要。",
+      followersLabel: "粉丝",
+      readersLabel: "读者",
+      viewMore: "查看全部 100+ 信息源",
+      sectionKol: "顶级 AI 声音",
+      sectionMedia: "顶级 AI 媒体"
     },
     pricing: {
       title: "选择您的计划",
       subtitle: "内测期间，所有高级功能限时免费开放",
       explorer: {
         name: "Explorer",
-        desc: "适合刚入门的 Web3 探索者",
+        desc: "适合 AI 爱好者",
         cta: "申请内测",
-        features: ["每日 1 次 Alpha 简报", "基础公链监控 (ETH/SOL)", "社区支持"]
+        features: ["每日 1 次 AI 简报", "基础主题追踪", "邮件支持"]
       },
       pro: {
-        name: "Alpha Hunter",
-        desc: "为全职交易员和分析师打造",
+        name: "Pro Insider",
+        desc: "为创始人和 VC 打造",
         badge: "最受欢迎",
         cta: "申请内测",
-        features: ["实时 Alpha 信号推送", "无限量 AI 研报总结", "全链监控 (含 Layer2)", "Smart Money 地址追踪"]
+        features: ["实时 AI 信号推送", "无限量 AI 摘要总结", "自定义信息源订阅", "论文精读摘要"]
       },
       whale: {
-        name: "Whale",
-        desc: "机构与大户专用通道",
+        name: "Enterprise",
+        desc: "机构专用通道",
         cta: "申请内测",
-        features: ["API 数据接口访问", "定制化监控策略", "1v1 专属客服经理"]
+        features: ["API 数据接口访问", "定制化情报服务", "1v1 专属客服经理"]
       }
-    },
-    community: {
-      title: "加入核心社区",
-      subtitle: "直接获取 Alpha 信号与开发动态。",
-      wechatTitle: "微信内测群 (优先)",
-      wechatDesc: "扫码直接加入内测交流群",
-      wechatNote: "该二维码7天内 (1月3日前) 有效，重新进入将更新",
-      telegramTitle: "Telegram 频道",
-      telegramDesc: "加入全球更新频道",
-      telegramBtn: "加入 Telegram"
     },
     waitlist: {
       title: "加入内测",
       subtitle: "首批仅开放",
-      subtitle2: "个席位。立即预订您的 Alpha 过滤器。",
+      subtitle2: "个席位。立即预订您的 AI 情报过滤器。",
       emailLabel: "邮箱地址 (Email)",
       placeholder: "you@example.com",
       cta: "立即申请",
@@ -217,8 +231,8 @@ export const translations = {
       close: "关闭"
     },
     footer: {
-      tagline: "Web3 AI 降噪情报官",
-      rights: "Voiverse Labs. All rights reserved.",
+      tagline: "AI 行业情报降噪官",
+      rights: "AIFocus Labs. All rights reserved.",
       privacy: "隐私政策",
       terms: "服务条款"
     }

@@ -34,12 +34,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
               <BrainCircuit className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold tracking-tight text-slate-900">
-              Voiverse
+              AIFocus
             </span>
           </div>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
+            <a href="#sources" className="text-slate-600 hover:text-indigo-600 text-sm font-medium transition-colors">{t.nav.sources}</a>
             <a href="#features" className="text-slate-600 hover:text-indigo-600 text-sm font-medium transition-colors">{t.nav.works}</a>
             <a href="#topics" className="text-slate-600 hover:text-indigo-600 text-sm font-medium transition-colors">{t.nav.topics}</a>
             <a href="#pricing" className="text-slate-600 hover:text-indigo-600 text-sm font-medium transition-colors">{t.nav.pricing}</a>
@@ -79,6 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-slate-100 p-4 absolute w-full shadow-xl">
           <div className="flex flex-col space-y-4">
+             <a href="#sources" onClick={() => setMobileMenuOpen(false)} className="text-slate-600 font-medium">{t.nav.sources}</a>
              <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-slate-600 font-medium">{t.nav.works}</a>
              <a href="#topics" onClick={() => setMobileMenuOpen(false)} className="text-slate-600 font-medium">{t.nav.topics}</a>
              <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-slate-600 font-medium">{t.nav.pricing}</a>

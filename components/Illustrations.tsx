@@ -1,8 +1,8 @@
 import React from 'react';
 import { 
   MessageCircle, Twitter, TrendingUp, AlertCircle, 
-  Cpu, Diamond, ArrowDown,
-  CheckCircle, Coffee, Newspaper, Zap, Filter
+  Cpu, Diamond, ArrowDown, Heart, ThumbsUp, Bookmark,
+  CheckCircle, Coffee, Newspaper, Zap, Filter, Brain, Sparkles
 } from 'lucide-react';
 
 // ==========================================
@@ -93,7 +93,71 @@ export const SolutionIllustration: React.FC = () => {
 };
 
 // ==========================================
-// SCENE 3: THE RESULT (Relaxed Control)
+// SCENE 3: PERSONALIZATION (Learning Your Taste)
+// ==========================================
+export const PersonalizationIllustration: React.FC = () => {
+  return (
+    <div className="relative w-full h-full bg-gradient-to-b from-purple-50/50 to-white flex flex-col items-center justify-center p-4">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#6B21A8 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+      
+      {/* Central Brain */}
+      <div className="relative z-10 mb-4">
+        <div className="relative">
+          <div className="absolute -inset-4 bg-purple-200/40 rounded-full blur-xl animate-pulse"></div>
+          <div className="relative w-16 h-16 bg-white rounded-2xl shadow-lg shadow-purple-200 flex items-center justify-center border border-purple-100">
+            <Brain className="w-8 h-8 text-purple-600" />
+          </div>
+          {/* Learning sparkles */}
+          <div className="absolute -top-2 -right-2">
+            <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
+          </div>
+        </div>
+      </div>
+
+      {/* User Actions - Learning signals */}
+      <div className="flex gap-6 mb-4">
+        {/* Like */}
+        <div className="flex flex-col items-center animate-float" style={{ animationDelay: '0s' }}>
+          <div className="bg-pink-100 p-2 rounded-xl border border-pink-200 shadow-sm">
+            <Heart className="w-4 h-4 text-pink-500" fill="currentColor" />
+          </div>
+          <div className="w-0.5 h-4 bg-pink-200 mt-1"></div>
+        </div>
+        
+        {/* Save */}
+        <div className="flex flex-col items-center animate-float" style={{ animationDelay: '0.3s' }}>
+          <div className="bg-indigo-100 p-2 rounded-xl border border-indigo-200 shadow-sm">
+            <Bookmark className="w-4 h-4 text-indigo-500" fill="currentColor" />
+          </div>
+          <div className="w-0.5 h-4 bg-indigo-200 mt-1"></div>
+        </div>
+        
+        {/* Thumbs up */}
+        <div className="flex flex-col items-center animate-float" style={{ animationDelay: '0.6s' }}>
+          <div className="bg-emerald-100 p-2 rounded-xl border border-emerald-200 shadow-sm">
+            <ThumbsUp className="w-4 h-4 text-emerald-500" fill="currentColor" />
+          </div>
+          <div className="w-0.5 h-4 bg-emerald-200 mt-1"></div>
+        </div>
+      </div>
+
+      {/* Learning Progress */}
+      <div className="bg-white rounded-xl px-4 py-2 shadow-sm border border-purple-100">
+        <div className="flex items-center gap-2">
+          <div className="text-xs font-medium text-slate-500">Learning:</div>
+          <div className="w-24 h-2 bg-slate-100 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-purple-400 to-purple-600 rounded-full w-3/4 animate-pulse"></div>
+          </div>
+          <div className="text-xs font-bold text-purple-600">75%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ==========================================
+// SCENE 4: THE RESULT (Relaxed Control)
 // ==========================================
 
 interface ResultIllustrationProps {

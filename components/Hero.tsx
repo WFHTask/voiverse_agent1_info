@@ -55,6 +55,11 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
         <p className="mt-2 md:mt-4 text-sm md:text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
           {t.hero.desc}
         </p>
+        
+        {/* Learn Preference Hint */}
+        <p className="mt-3 text-xs md:text-sm text-indigo-600 font-medium">
+          ✨ {t.hero.learnPref}
+        </p>
 
         {/* Topic Tags Pills */}
         <div className="mt-6 flex flex-wrap justify-center gap-2 max-w-4xl mx-auto opacity-80">

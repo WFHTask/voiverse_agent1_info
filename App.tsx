@@ -1,17 +1,17 @@
 import React from 'react';
 import { Hero } from './components/Hero';
-import { ThreeStepFlow } from './components/ThreeStepFlow';
+import { FourStepFlow } from './components/FourStepFlow';
 import { FeaturedTopics } from './components/FeaturedTopics';
+import { KOLShowcase } from './components/KOLShowcase';
 import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
-import { CommunityAccess } from './components/CommunityAccess';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 const AppContent: React.FC = () => {
-  // Scroll to the community access section instead of opening a modal
-  const scrollToCommunity = () => {
-    const element = document.getElementById('community-access');
+  // Scroll to the pricing section for CTA
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -19,14 +19,14 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden bg-voi-bg text-voi-text-main font-sans selection:bg-voi-accent/20 selection:text-voi-accent">
-      <Navbar onJoinClick={scrollToCommunity} />
+      <Navbar onJoinClick={scrollToPricing} />
       
       <main className="flex-grow">
-        <Hero onCtaClick={scrollToCommunity} />
-        <ThreeStepFlow onJoinClick={scrollToCommunity} />
+        <Hero onCtaClick={scrollToPricing} />
+        <KOLShowcase />
+        <FourStepFlow onJoinClick={scrollToPricing} />
         <FeaturedTopics />
-        <Pricing onPlanClick={scrollToCommunity} />
-        <CommunityAccess />
+        <Pricing onPlanClick={scrollToPricing} />
       </main>
 
       <Footer />
