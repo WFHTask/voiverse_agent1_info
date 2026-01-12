@@ -12,15 +12,9 @@ export const translations = {
     },
     hero: {
       badge: "AIFocus Alpha Launch",
-      titleStart: "We Read For You.",
-      titleEnd: "You Only Read What Matters.",
-      mobileSubtitle: "10 minutes a day. Never miss what's important.",
-      desktopSubtitle: "We believe the truly important news for you each day is just a handful — readable in 10 minutes. We find them for you.",
-      desc: "No more jumping between dozens of tabs, anxious about missing something crucial. AIFocus reads all your information sources — Twitter KOLs, newsletters, research papers, tech media — and surfaces only the most important updates for you.",
-      learnPref: "The more you use it, the better it understands what matters to you.",
-      topics: ["Twitter KOLs", "Research Papers", "Tech Media", "Newsletters", "Podcasts", "Industry Reports", "Startup News", "Open Source"],
-      cta: "Get Early Access",
-      quota: "* First 100 spots only"
+      title: "We read all your information sources. You only read what truly matters to you.",
+      subtitle: "AI Industry Daily Brief in 10 Minutes",
+      cta: "Get Early Access"
     },
     flow: {
       title: "How it works: From Chaos to Clarity",
@@ -130,15 +124,9 @@ export const translations = {
     },
     hero: {
       badge: "AIFocus 内测启动",
-      titleStart: "我们帮你读。",
-      titleEnd: "你只读最重要的。",
-      mobileSubtitle: "每天10分钟，不错过任何重要信息。",
-      desktopSubtitle: "我们相信，对你而言一天里真正重要的信息也就那么几条，十分钟内就能读完。我们替你找出来。",
-      desc: "不用再每天分心花几个小时在几十上百个标签之间跳转，生怕错过最重要的信息。AIFocus 帮你阅读所有信息源 — Twitter KOL、Newsletter、研究论文、科技媒体 — 只把对你最重要的呈现出来。",
-      learnPref: "用得越多，它就越懂你关心什么。",
-      topics: ["Twitter KOL", "研究论文", "科技媒体", "Newsletter", "播客", "行业报告", "创业动态", "开源项目"],
-      cta: "立即获取内测资格",
-      quota: "* 首批 100 个测试名额"
+      title: "我们帮你读你的所有信息源，你只读最对你重要的那一部分。",
+      subtitle: "AI 行业每日10分钟简报",
+      cta: "立即获取内测资格"
     },
     flow: {
       title: "工作原理：从混乱到清晰",

@@ -10,7 +10,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative pt-28 pb-16 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+    <section className="relative pt-32 pb-32 md:pt-64 md:pb-64 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white min-h-screen flex items-center">
       {/* Light Background Gradient */}
       <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-50 via-slate-50 to-white opacity-80 pointer-events-none"></div>
       
@@ -18,8 +18,8 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200/40 rounded-full blur-[80px] mix-blend-multiply animate-float"></div>
       <div className="absolute top-40 right-10 w-96 h-96 bg-indigo-200/40 rounded-full blur-[80px] mix-blend-multiply animate-float" style={{animationDelay: '2s'}}></div>
 
-      <div className="max-w-5xl mx-auto text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-semibold mb-6 md:mb-8 shadow-sm">
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-semibold mb-12 md:mb-16 shadow-sm">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-600"></span>
@@ -27,68 +27,26 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           {t.hero.badge}
         </div>
         
-        {/* Mobile: Unified simplified sentence */}
-        <h1 className="md:hidden text-4xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-          {t.hero.titleStart} <br/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
-             {t.hero.titleEnd}
-          </span>
-          <span className="block text-xl mt-3 text-slate-700 font-bold">
-            {t.hero.mobileSubtitle}
-          </span>
-        </h1>
-
-        {/* Desktop: Original Two-part structure */}
-        <h1 className="hidden md:block text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1]">
-          {t.hero.titleStart} <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
-             {t.hero.titleEnd}
-          </span>
+        {/* Unified Title for All Devices */}
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-8 md:mb-12 leading-tight max-w-3xl mx-auto">
+          {t.hero.title}
         </h1>
         
-        {/* Desktop Emotional Hook */}
-        <p className="hidden md:block mt-4 text-xl md:text-2xl text-slate-900 font-medium max-w-2xl mx-auto">
-          {t.hero.desktopSubtitle}
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-slate-600 font-medium mb-12 md:mb-16">
+          {t.hero.subtitle}
         </p>
-
-        {/* Functional Description */}
-        <p className="mt-2 md:mt-4 text-sm md:text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-          {t.hero.desc}
-        </p>
-        
-        {/* Learn Preference Hint */}
-        <p className="mt-3 text-xs md:text-sm text-indigo-600 font-medium">
-          ✨ {t.hero.learnPref}
-        </p>
-
-        {/* Topic Tags Pills */}
-        <div className="mt-6 flex flex-wrap justify-center gap-2 max-w-4xl mx-auto opacity-80">
-          {t.hero.topics.map((tag, index) => (
-            <span 
-              key={index} 
-              className="px-2 py-1 md:px-3 md:py-1 bg-slate-100/80 border border-slate-200 text-slate-600 rounded-full text-xs md:text-sm font-medium hover:bg-white hover:border-indigo-200 hover:text-indigo-600 transition-colors cursor-default"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
         
         {/* CTA Button */}
-        <div className="mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex justify-center">
           <button 
             onClick={onCtaClick}
-            className="group relative inline-flex items-center justify-center px-8 py-3.5 md:py-4 text-lg font-bold text-white transition-all duration-200 bg-slate-900 rounded-full hover:bg-indigo-600 hover:shadow-xl hover:shadow-indigo-600/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 focus:ring-offset-white"
+            className="group relative inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold text-white transition-all duration-200 bg-slate-900 rounded-full hover:bg-indigo-600 hover:shadow-2xl hover:shadow-indigo-600/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 focus:ring-offset-white"
           >
             <Sparkles className="w-5 h-5 mr-2 text-indigo-300 group-hover:text-white" />
             {t.hero.cta}
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
-        
-        <div className="mt-8 md:mt-10 flex items-center justify-center gap-8 text-slate-400 grayscale opacity-60">
-           <div className="h-1 w-1 rounded-full bg-slate-300"></div>
-           <p className="text-xs md:text-sm font-medium">{t.hero.quota}</p>
-           <div className="h-1 w-1 rounded-full bg-slate-300"></div>
         </div>
       </div>
     </section>
