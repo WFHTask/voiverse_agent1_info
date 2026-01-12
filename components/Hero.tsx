@@ -9,7 +9,6 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const { t } = useLanguage();
   const [insightOpacity, setInsightOpacity] = useState(1);
-  const [showInsight, setShowInsight] = useState(true);
 
   useEffect(() => {
     // Start fade out after 5 seconds (reading time)
@@ -17,15 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
       setInsightOpacity(0);
     }, 5000);
 
-    // Remove element after fade out completes (1s transition)
-    const removeTimer = setTimeout(() => {
-      setShowInsight(false);
-    }, 6000);
-
-    return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(removeTimer);
-    };
+    return () => clearTimeout(fadeTimer);
   }, []);
 
   return (
@@ -43,15 +34,13 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           {t.hero.title}
         </h1>
         
-        {/* Insight - Fades out after reading time */}
-        {showInsight && (
-          <p 
-            className="text-base md:text-lg text-slate-500/80 italic font-medium mb-6 md:mb-8 max-w-2xl mx-auto transition-opacity duration-1000"
-            style={{ opacity: insightOpacity }}
-          >
-            {t.hero.insight}
-          </p>
-        )}
+        {/* Insight - Fades out after reading time (keeps space to prevent layout shift) */}
+        <p 
+          className="text-base md:text-lg text-slate-500/80 italic font-medium mb-6 md:mb-8 max-w-2xl mx-auto transition-opacity duration-1000"
+          style={{ opacity: insightOpacity }}
+        >
+          {t.hero.insight}
+        </p>
         
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-slate-600 font-medium mb-12 md:mb-16">
