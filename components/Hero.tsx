@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -8,6 +8,25 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const { t } = useLanguage();
+  const [insightOpacity, setInsightOpacity] = useState(1);
+  const [showInsight, setShowInsight] = useState(true);
+
+  useEffect(() => {
+    // Start fade out after 5 seconds (reading time)
+    const fadeTimer = setTimeout(() => {
+      setInsightOpacity(0);
+    }, 5000);
+
+    // Remove element after fade out completes (1s transition)
+    const removeTimer = setTimeout(() => {
+      setShowInsight(false);
+    }, 6000);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
 
   return (
     <section className="relative pt-32 pb-32 md:pt-64 md:pb-64 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white min-h-screen flex items-center">
@@ -19,23 +38,20 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
       <div className="absolute top-40 right-10 w-96 h-96 bg-indigo-200/40 rounded-full blur-[80px] mix-blend-multiply animate-float" style={{animationDelay: '2s'}}></div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-semibold mb-12 md:mb-16 shadow-sm">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-600"></span>
-          </span>
-          {t.hero.badge}
-        </div>
-        
         {/* Unified Title for All Devices */}
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-8 md:mb-12 leading-tight max-w-3xl mx-auto">
           {t.hero.title}
         </h1>
         
-        {/* Insight - Lightweight Quote Style */}
-        <p className="text-base md:text-lg text-slate-500/80 italic font-medium mb-6 md:mb-8 max-w-2xl mx-auto">
-          💡 {t.hero.insight}
-        </p>
+        {/* Insight - Fades out after reading time */}
+        {showInsight && (
+          <p 
+            className="text-base md:text-lg text-slate-500/80 italic font-medium mb-6 md:mb-8 max-w-2xl mx-auto transition-opacity duration-1000"
+            style={{ opacity: insightOpacity }}
+          >
+            {t.hero.insight}
+          </p>
+        )}
         
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-slate-600 font-medium mb-12 md:mb-16">
