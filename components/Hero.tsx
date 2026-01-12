@@ -32,6 +32,11 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           {t.hero.title}
         </h1>
         
+        {/* Insight - Lightweight Quote Style */}
+        <p className="text-base md:text-lg text-slate-500/80 italic font-medium mb-6 md:mb-8 max-w-2xl mx-auto">
+          💡 {t.hero.insight}
+        </p>
+        
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-slate-600 font-medium mb-12 md:mb-16">
           {t.hero.subtitle}

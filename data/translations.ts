@@ -12,7 +12,8 @@ export const translations = {
     },
     hero: {
       badge: "AIFocus Alpha Launch",
-      title: "We read all your information sources. You only read what truly matters to you.",
+      title: "We read all your information sources. You only read what matters most to you.",
+      insight: "The truly important information each day? Just 10 minutes of reading.",
       subtitle: "AI Industry Daily Brief in 10 Minutes",
       cta: "Get Early Access"
     },
@@ -124,7 +125,8 @@ export const translations = {
     },
     hero: {
       badge: "AIFocus 内测启动",
-      title: "我们帮你读你的所有信息源，你只读最对你重要的那一部分。",
+      title: "我们帮你读你的所有信息源，你只读对你最重要的那一部分。",
+      insight: "其实一天中对你最重要非看不可的信息也就十来分钟就能读完",
       subtitle: "AI 行业每日10分钟简报",
       cta: "立即获取内测资格"
     },
