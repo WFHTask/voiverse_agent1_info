@@ -11,8 +11,8 @@ export const translations = {
       waitlist: "Join Waitlist"
     },
     hero: {
-      title: "We read all your information. You only read what matters most.",
-      subtitle: "Your Essential AI Industry Brief in 10 Minutes",
+      title: "We read all your information, you only read what matters most",
+      subtitle: "What truly matters to you, filtered down to just 10 minutes daily",
       cta: "Get Early Access"
     },
     flow: {
@@ -122,8 +122,8 @@ export const translations = {
       waitlist: "加入内测"
     },
     hero: {
-      title: "我们帮你读你的所有信息，你只读最重要的那一部分。",
-      subtitle: "AI行业你每日非看不可的10分钟简报",
+      title: "我们帮你读你的所有信息，你只读最重要的那一部分",
+      subtitle: "对你真正重要的，过滤后每天仅10分钟",
       cta: "立即获取内测资格"
     },
     flow: {

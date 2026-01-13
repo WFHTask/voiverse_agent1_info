@@ -14,7 +14,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
       {/* Light Background Gradient */}
       <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-50 via-slate-50 to-white opacity-80 pointer-events-none"></div>
       
-      {/* Decorative Orbs - Softer opacity */}
+      {/* Decorative Orbs - Softer opacity for方案A */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200/30 rounded-full blur-[80px] mix-blend-multiply animate-float"></div>
       <div className="absolute top-40 right-10 w-96 h-96 bg-indigo-200/30 rounded-full blur-[80px] mix-blend-multiply animate-float" style={{animationDelay: '2s'}}></div>
 
@@ -24,8 +24,8 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           {t.hero.title}
         </h1>
         
-        {/* Subtitle - More prominent */}
-        <p className="text-2xl md:text-3xl text-slate-600 font-medium mb-12 md:mb-16">
+        {/* Subtitle - Enhanced size per 方案A */}
+        <p className="text-2xl md:text-3xl text-slate-700 font-medium mb-12 md:mb-16 max-w-3xl mx-auto">
           {t.hero.subtitle}
         </p>
         
