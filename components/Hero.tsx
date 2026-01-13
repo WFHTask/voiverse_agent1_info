@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -8,42 +8,24 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const { t } = useLanguage();
-  const [insightOpacity, setInsightOpacity] = useState(1);
-
-  useEffect(() => {
-    // Start fade out after 5 seconds (reading time)
-    const fadeTimer = setTimeout(() => {
-      setInsightOpacity(0);
-    }, 5000);
-
-    return () => clearTimeout(fadeTimer);
-  }, []);
 
   return (
     <section className="relative pt-32 pb-32 md:pt-64 md:pb-64 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white min-h-screen flex items-center">
       {/* Light Background Gradient */}
       <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-50 via-slate-50 to-white opacity-80 pointer-events-none"></div>
       
-      {/* Decorative Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200/40 rounded-full blur-[80px] mix-blend-multiply animate-float"></div>
-      <div className="absolute top-40 right-10 w-96 h-96 bg-indigo-200/40 rounded-full blur-[80px] mix-blend-multiply animate-float" style={{animationDelay: '2s'}}></div>
+      {/* Decorative Orbs - Softer opacity */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200/30 rounded-full blur-[80px] mix-blend-multiply animate-float"></div>
+      <div className="absolute top-40 right-10 w-96 h-96 bg-indigo-200/30 rounded-full blur-[80px] mix-blend-multiply animate-float" style={{animationDelay: '2s'}}></div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Unified Title for All Devices */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-8 md:mb-12 leading-tight max-w-3xl mx-auto">
+        {/* Main Title */}
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-10 leading-tight max-w-3xl mx-auto">
           {t.hero.title}
         </h1>
         
-        {/* Insight - Fades out after reading time (keeps space to prevent layout shift) */}
-        <p 
-          className="text-base md:text-lg text-slate-500/80 italic font-medium mb-6 md:mb-8 max-w-2xl mx-auto transition-opacity duration-1000"
-          style={{ opacity: insightOpacity }}
-        >
-          {t.hero.insight}
-        </p>
-        
-        {/* Subtitle */}
-        <p className="text-lg md:text-xl text-slate-600 font-medium mb-12 md:mb-16">
+        {/* Subtitle - More prominent */}
+        <p className="text-2xl md:text-3xl text-slate-600 font-medium mb-12 md:mb-16">
           {t.hero.subtitle}
         </p>
         

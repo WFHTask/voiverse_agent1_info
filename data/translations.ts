@@ -11,9 +11,8 @@ export const translations = {
       waitlist: "Join Waitlist"
     },
     hero: {
-      title: "We read all your information sources. You only read what matters most to you.",
-      insight: "💡 The truly important information each day? Just 10 minutes of reading.",
-      subtitle: "AI Industry Daily Brief in 10 Minutes",
+      title: "We read all your information. You only read what matters most.",
+      subtitle: "Your Essential AI Industry Brief in 10 Minutes",
       cta: "Get Early Access"
     },
     flow: {
@@ -123,9 +122,8 @@ export const translations = {
       waitlist: "加入内测"
     },
     hero: {
-      title: "我们帮你读你的所有信息源，你只读对你最重要的那一部分。",
-      insight: "💡 其实一天中对你非看不可的信息也就十来分钟能看完",
-      subtitle: "AI 行业每日10分钟简报",
+      title: "我们帮你读你的所有信息，你只读最重要的那一部分。",
+      subtitle: "AI行业你每日非看不可的10分钟简报",
       cta: "立即获取内测资格"
     },
     flow: {
